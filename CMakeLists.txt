@@ -30,7 +30,8 @@ add_subdirectory("${STM32F4XX_HAL_DRIVER_DIRECTORY}" STM32F4xx_HAL_Driver)
 add_library(STM32F4xx_HAL_Driver-object-library OBJECT
 		HAL_Delay.cpp
 		HAL_GetTick.cpp
-		SystemCoreClock.cpp)
+		SystemCoreClock.cpp
+		APBPrescTable.cpp)
 target_include_directories(STM32F4xx_HAL_Driver-object-library PRIVATE
 		$<TARGET_PROPERTY:STM32F4xx_HAL_Driver,INTERFACE_INCLUDE_DIRECTORIES>)
 
